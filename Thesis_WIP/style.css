@@ -1,0 +1,131 @@
+html {
+  font-family: "Zilla Slab", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5rem;
+  letter-spacing: 0.05em;
+  color: #000000;
+
+  padding: 5rem;
+}
+
+body {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin-top: -2rem;
+  margin-bottom: 0;
+  color: #000000;
+}
+
+h3 {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #000000;
+}
+
+h4 {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #000000;
+}
+
+button {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 1rem 3rem;
+  background: #000000;
+  border: none;
+  border-radius: 0;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+ol {
+  list-style: none;
+  counter-reset: counter;
+  margin: 0;
+  padding: 0;
+  padding-left: 4rem;
+}
+
+ol li {
+  counter-increment: counter;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+ol li::before {
+  content: counter(counter);
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+
+  width: 2rem;
+  height: 2rem;
+  background: #000000;
+
+  position: absolute;
+  top: 0.25rem;
+  left: calc(-1 * 3rem - 10px);
+}
+
+span {
+    display: inline-block;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-right: 1rem;
+}
+
+span:last-child {
+    margin-right: 0;
+}
+
+.row {
+  display: table;
+  margin: 2rem 0;
+}
+
+.column {
+  display: table-cell;
+  max-width: 24rem;
+  padding-right: 2rem;
+}
+
+.column:last-child {
+  padding-right: 0;
+}
+
+#canvasContainer {
+  margin: 2rem;
+}
+
+#canvasContainer > canvas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

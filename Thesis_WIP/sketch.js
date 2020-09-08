@@ -28,7 +28,7 @@ function gotResults(error, results) {
 
 
 function setup() {
-  createCanvas(640, 550);
+  createCanvas(640, 550).parent("canvasContainer");
   video = createCapture(VIDEO);
   video.hide();
   background(0);
