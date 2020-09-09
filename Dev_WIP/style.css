@@ -5,7 +5,7 @@ html {
   line-height: 1.5rem;
   letter-spacing: 0.05em;
   color: #000000;
-
+  position: relative;
   padding: 5rem;
 }
 
@@ -222,6 +222,12 @@ a:hover {
   position: absolute;
   top: 0.25rem;
   left: calc(-1 * 3rem - 10px);
+}
+
+.hfk-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 #canvasContainer {
