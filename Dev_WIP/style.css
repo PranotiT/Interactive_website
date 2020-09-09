@@ -231,7 +231,7 @@ a:hover {
 }
 
 #canvasContainer {
-  margin: 2rem;
+  margin: 2rem 0;
 }
 
 #canvasContainer > canvas {
