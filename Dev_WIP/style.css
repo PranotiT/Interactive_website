@@ -50,9 +50,33 @@ button {
   text-transform: uppercase;
   color: #ffffff;
   padding: 1rem 3rem;
+  margin-top: 1rem;
   background: #000000;
   border: none;
   border-radius: 0;
+  cursor: pointer;
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.75;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+button:active {
+  outline: 0;
 }
 
 footer {
@@ -118,17 +142,17 @@ a:visited {
 }
 
 a:hover {
-  opacity: 0.5;
+  opacity: 0.75;
   transform-origin: 50% 50%;
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
   -o-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  transform: scale(1.25);
 }
 
 ::-webkit-scrollbar {
