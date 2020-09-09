@@ -1012,6 +1012,10 @@ function updateResult(query) {
             }
         })
     })
+
+    if (resultList.innerHTML == "") {
+        resultList.innerHTML = `Sorry, we couldn't find any matches for "${query}". Please try another word!`;
+    }
 }
 
 $(document).ready(function() {
