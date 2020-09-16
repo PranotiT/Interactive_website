@@ -58,7 +58,7 @@ function setup() {
 
 function draw() {
   background(0);
-  image(video, 0, 0, 520, 440);
+  image(video, 0, 0, 900, 500);
   ellipseMode(CENTER);
   fill(255, 204, 0);
   ellipse(value * width, height / 2, 100, 100);

@@ -55,10 +55,10 @@ button {
   border: none;
   border-radius: 0;
   cursor: pointer;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 button:hover {
@@ -99,7 +99,7 @@ footer > div > div > a:last-child {
   margin-right: 0;
 }
 
-input[type=search] {
+input[type="search"] {
   width: 100%;
   height: 3rem;
   border-radius: 0;
@@ -113,15 +113,15 @@ input[type=search] {
   letter-spacing: 0.05em;
 }
 
-input[type=search]:focus {
+input[type="search"]:focus {
   border-radius: 0;
   outline: 0;
   border: 2px solid #101010;
 }
 
-input[type=search]::-webkit-search-cancel-button{
+input[type="search"]::-webkit-search-cancel-button {
   position: relative;
-  right: 1rem;  
+  right: 1rem;
   height: 1rem;
   width: 1rem;
 }
@@ -130,10 +130,10 @@ a {
   color: #101010;
   text-decoration: none;
   opacity: 1;
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 a:visited {
@@ -158,13 +158,13 @@ a:hover {
 ::-webkit-scrollbar {
   width: 8px;
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background: #c4c4c4;
   border-radius: 1px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #808080; 
+  background: #808080;
 }
 
 .row {
@@ -187,7 +187,7 @@ a:hover {
   overflow-y: scroll;
   border: 1px solid #101010;
   border-top: none;
-  padding: 1rem
+  padding: 1rem;
 }
 
 .result-box > ol > li {
@@ -231,8 +231,181 @@ a:hover {
   right: 0;
 }
 
+.canvasControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.canvasControls > .button {
+  flex-grow: 1;
+}
+
+.canvasControls > .button > button {
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 0;
+  background: none;
+}
+
+.canvasControls > .button > button:hover {
+  opacity: 0.5;
+  transform-origin: 50% 50%;
+  transform: scale(1);
+}
+
+/* Hides the slider so custom styles can be added */
+.canvasControls > .slider > input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+.canvasControls > .slider > input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.canvasControls > .slider > input[type="range"]:focus {
+  outline: none;
+}
+
+.canvasControls > .slider > input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/*Real styling starts from here*/
+.canvasControls > .slider {
+  flex-grow: 4;
+}
+
+.canvasControls > .slider > input[type="range"] {
+  padding: 0.5rem 1rem;
+  min-width: 500px;
+}
+
+.canvasControls > .slider > input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  opacity: 0.9;
+  cursor: pointer;
+  margin-top: -14px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.canvasControls > .slider > input[type="range"]::-moz-range-thumb {
+  border: none;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  opacity: 0.9;
+  cursor: pointer;
+  -moz-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.canvasControls > .slider > input[type="range"]::-ms-thumb {
+  border: none;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.canvasControls > .slider > input[type="range"]:hover::-webkit-slider-thumb {
+  height: 1rem;
+  width: 1rem;
+  opacity: 1;
+}
+
+.canvasControls > .slider > input[type="range"]:hover::-moz-range-thumb {
+  height: 1rem;
+  width: 1rem;
+  opacity: 1;
+}
+
+.canvasControls > .slider > input[type="range"]:hover::-ms-thumb {
+  height: 1rem;
+  width: 1rem;
+  opacity: 1;
+}
+
+.canvasControls > .slider > input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.25rem;
+  cursor: pointer;
+  background: #ffffff;
+  opacity: 0.5;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.canvasControls
+  > .slider
+  > input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+}
+
+.canvasControls > .slider > input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 0.25rem;
+  cursor: pointer;
+  background: #ffffff;
+  opacity: 0.5;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.canvasControls > .slider > input[type="range"]::-ms-track {
+  width: 100%;
+  height: 0.25rem;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 1rem 0;
+  color: transparent;
+}
+
+.canvasControls > .slider > input[type="range"]::-ms-fill-lower {
+  background: #ffffff;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.canvasControls > .slider > input[type="range"]:focus::-ms-fill-lower {
+  background: #ffffff;
+}
+
+.canvasControls > .slider > input[type="range"]::-ms-fill-upper {
+  background: #ffffff;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.canvasControls > .slider > input[type="range"]:focus::-ms-fill-upper {
+  background: #ffffff;
+}
+
 #canvasContainer {
   margin: 2rem 0;
+  position: relative;
 }
 
 #canvasContainer > canvas {
@@ -245,7 +418,7 @@ a:hover {
   html {
     padding: 20vh 10vw 10vh 10vw;
   }
-  
+
   h1 {
     font-size: 2rem;
     line-height: 2.5rem;
