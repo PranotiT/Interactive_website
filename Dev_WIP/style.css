@@ -221,7 +221,7 @@ a:hover {
   background: #101010;
 
   position: absolute;
-  top: 0.25rem;
+  top: -0.25rem;
   left: calc(-1 * 3rem - 10px);
 }
 

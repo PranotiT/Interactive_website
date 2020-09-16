@@ -14,6 +14,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="sketch-2.js"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Zilla+Slab:wght@400&display=swap"
     rel="stylesheet">
@@ -31,17 +32,18 @@
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <img src="https://via.placeholder.com/900x506" alt="">
+    <div id="canvasContainer"></div>
+    <div id="slider"></div>
+    <div id="addButton"></div>
+    <div id="trainButton"></div>
 
-  <h3>Steps to Train Your Neural Network</h3>
+  <h3>Follow these instructions to control the circle using your hand!</h3>
   <ol class="styled-numbering">
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.</li>
+    <li>Move the slider to the beginning and place your hand to the left end of the screen.</li>
+    <li>Click on "ADD EXAMPLE IMAGE". Repeat this for intermittent positions on the slider.</li>
+    <li>Click TRAIN.</li>
   </ol>
+  <p>Once the model has trained, you should be able to move the circle horizontally based on your hand movements.</p>
 </body>
 <footer>
   <hr />
