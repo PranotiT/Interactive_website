@@ -45,12 +45,12 @@ function setup() {
 
   slider = createSlider(0, 1, 0.5, 0.01).parent("slider");;
 
-  addButton = createButton('add example image').parent("addButton");
+  addButton = createButton('Capture Training Image').parent("addButton");
   addButton.mousePressed(function() {
     predictor.addImage(slider.value());
   });
 
-  trainButton = createButton('train').parent("trainButton");
+  trainButton = createButton('Train').parent("trainButton");
   trainButton.mousePressed(function() {
     predictor.train(whileTraining);
   });

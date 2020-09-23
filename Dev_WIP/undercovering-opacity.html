@@ -1,0 +1,79 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Uncovering Opacity</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" src="libraries/p5.dom.js"></script>
+  <script language="javascript" src="libraries/p5.sound.js"></script>
+  //-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="sketch-1.js"></script>
+  <script src="search.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Zilla+Slab:wght@400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <img src="HFKlogo.svg" alt="HFK Logo" class="hfk-logo">
+
+  <h4><a href="./">← Exploring Neural Networks</a> | Pranoti Tumkar</h4>
+  <h1>Uncovering Opacity</h1>
+  <p>A machine learning model is a mathematical representation of a real-world process. Here, we use a model which is
+    already trained to recognise images - a pre-trained model.<a href="">Pre-trained models</a>  are used in real-world applications to
+    make decisions about various aspects of our lives. I also use pre-trained models in this project to show how they
+    are limited by the data they are trained on. Yet, they are used to influence important aspects of our lives.
+    Pre-trained model has learnt based on a fixed dataset. If i show it an image not from it’s dataset, it will not know
+    about it. </p>
+  <p>This hands-on demonstration focuses on the usage of “pre-trained models” in Machine Learning using image
+    classification. In <a href="">classification</a>, information is categorized into predefined categories. For example, an email can
+    either be ‘spam’ or ‘not spam’. You can hold up an object to the webcam and the model will recognise the object.
+    Sometimes, the recognition is not accurate. Below, you can search through the list of images this model is trained
+    on, to see if the object they are showing is a part of it.</p>
+  <div id="canvasContainer"></div>
+
+  <h3>Images It Is Trained on</h3>
+  <div id="search-box">
+    <input oninput="updateResult(this.value)" type="search" placeholder="Type to start searching..." />
+    <div class=result-box>
+      <ol class="list-group result"></ol>
+    </div>
+  </div>
+
+  <h3>How The Objects Are Recognized</h3>
+  <p>
+    This is a classification problem. The pre-trained <a href="">MobileNet</a> model has a fixed number of things it
+    knows about - the
+    images it is trained on. The list of images is below and you can search through them. It will classify the object
+    you are showing it based on the original 1,000 image categories it is trained on. It is not aware of any other
+    information. Which is why, you will find that oftentimes, the items shown through the webcam are not classified
+    accurately - such as your face! But the result you see will be something from the original 1,000 categories composed
+    of nearly 15 million images from the <a href="">ImageNet</a> database.
+  </p>
+</body>
+<footer>
+  <hr />
+  <div>
+    <div>
+      <p>© Pranoti Tumkar 2020</p>
+    </div>
+    <div>
+      <a href="http://www.linkedin.com/in/pranoti-tumkar"><span class="icon-linkedin2"></span></a>
+      <a href="https://github.com/PranotiT"><span class="icon-github"></span></a>
+      <a href="mailto:pranoti.tumkar01@gmail.com?subject=Hello!"><span class="icon-envelope-o"></span></a>
+    </div>
+  </div>
+</footer>
+
+</html>
