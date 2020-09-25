@@ -39,7 +39,7 @@ function gotResults(error, result) {
 function setup() {
   createCanvas(900, 500).parent("canvasContainer");
   video = createCapture(VIDEO);
-  video.size(900, 773);
+  video.size(640, 590);
   video.hide();
   background(0);
   mobilenet = ml5.featureExtractor('MobileNet', modelReady);
@@ -65,7 +65,7 @@ function draw() {
   background(0);
   translate(width, 0); // move to far corner
   scale(-1.0, 1.0);    // flip x-axis backwards
-  image(video, 0, 0, 900, 500);
+  image(video, 0, 0, 640, 590).resize(900, 0);
 
   translate(width, 0); // move to far corner
   scale(-1.0, 1.0);    // flip x-axis backwards
