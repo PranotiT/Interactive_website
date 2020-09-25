@@ -37,23 +37,25 @@ function gotResults(error, result) {
 }
 
 function setup() {
-  createCanvas(640, 590);
+  createCanvas(900, 500).parent("canvasContainer");
   video = createCapture(VIDEO);
   video.hide();
   background(0);
   mobilenet = ml5.featureExtractor('MobileNet', modelReady);
   predictor = mobilenet.regression(video, videoReady);
 
-  slider = createSlider(0, 1, 0.5, 0.01);
+  slider = createSlider(0, 1, 0.5, 0.01).parent("slider");
 
-  addButton = createButton('Capture training image');
-  addButton.mousePressed(function() {
+  addButton = createButton('Capture Training Image').parent("addButton");
+  addButton.mousePressed(function () {
+
     predictor.addImage(slider.value());
     samples++    //calculate training images captured
   });
 
-  trainButton = createButton('train');
-  trainButton.mousePressed(function() {
+
+  trainButton = createButton('Train').parent("trainButton");
+  trainButton.mousePressed(function () {
     predictor.train(whileTraining);
   });
 
@@ -62,17 +64,17 @@ function setup() {
 
 function draw() {
   background(0);
-  translate(width,0); // move to far corner
-  scale(-1.0,1.0);    // flip x-axis backwards
-  image(video, 0, 0, 640, 550);
+  translate(width, 0); // move to far corner
+  scale(-1.0, 1.0);    // flip x-axis backwards
+  image(video, 0, 0, 900, 500);
 
-  translate(width,0); // move to far corner
-  scale(-1.0,1.0);    // flip x-axis backwards
+  translate(width, 0); // move to far corner
+  scale(-1.0, 1.0);    // flip x-axis backwards
   ellipseMode(CENTER);
   fill(255, 204, 0);
   ellipse(value * width, height / 2, 100, 100);
 
-//display training images captured
+  //display training images captured
   fill(255);
   textSize(24);
   text("Captured training images: " + samples, 10, height - 10);
