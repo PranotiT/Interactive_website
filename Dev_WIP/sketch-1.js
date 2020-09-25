@@ -28,7 +28,7 @@ function gotResults(error, results) {
 
 
 function setup() {
-  createCanvas(900, 830).parent("canvasContainer");
+  createCanvas(900, 500).parent("canvasContainer");
   video = createCapture(VIDEO);
   video.hide();
   background(0);
@@ -41,7 +41,7 @@ function setup() {
 
 function draw() {
   background(0);
-  image(video, 0, 0, 900, 830);
+  image(video, 0, 0, 900, 500);
 
   fill(255);
   textSize(64);
