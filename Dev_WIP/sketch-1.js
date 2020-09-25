@@ -43,7 +43,7 @@ function setup() {
 function draw() {
   background(0);
   image(video, 0, 0, 900, 500);
-
+  scale(-1.0, 1.0);    // flip x-axis backwards
   fill(255);
   textSize(64);
   text(l, 10, height - 20);
