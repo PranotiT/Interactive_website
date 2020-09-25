@@ -7,6 +7,7 @@ let slider;
 let addButton;
 let trainButton;
 let samples = 0;  //calculate training images captured
+let trained = false;
 
 function modelReady() {
   console.log('Model is ready!!!');
@@ -45,22 +46,21 @@ function setup() {
   mobilenet = ml5.featureExtractor('MobileNet', modelReady);
   predictor = mobilenet.regression(video, videoReady);
 
-  slider = createSlider(0, 1, 0.5, 0.01).parent("slider");
+  slider = createSlider(0, 1, 0, 0.01).parent("slider");
 
   addButton = createButton('Capture Training Image').parent("addButton");
   addButton.mousePressed(function () {
-
     predictor.addImage(slider.value());
     samples++    //calculate training images captured
   });
 
-
   trainButton = createButton('Train').parent("trainButton");
   trainButton.mousePressed(function () {
     predictor.train(whileTraining);
+    trained = true;
   });
 }
-
+ 
 function draw() {
   background(0);
   translate(width, 0); // move to far corner
@@ -70,12 +70,17 @@ function draw() {
   translate(width, 0); // move to far corner
   scale(-1.0, 1.0);    // flip x-axis backwards
   ellipseMode(CENTER);
-  fill(255, 204, 0);
-  ellipse(value * width, height / 2, 100, 100);
+  fill(255);
+  if (!trained)
+    ellipse(slider.value() * width, height / 2, 100, 100);
+  else
+    ellipse(value * width, height / 2, 100, 100);
 
   //display training images captured
   fill(255);
   textSize(24);
+  strokeWeight(4);
+  stroke(0);
   text("Captured training images: " + samples, 10, height - 10);
 
 }
