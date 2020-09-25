@@ -58,8 +58,6 @@ function setup() {
   trainButton.mousePressed(function () {
     predictor.train(whileTraining);
   });
-
-  let infoText = createDiv("Use your hand to control the circle. Move the slider to the beginning and place your hand to the left end of the screen. Now click on the button to add example image. Repeat this for intermittent positions on the slider. Click train. Once the model has trained, you should be able to move the circle horizontally based on your hand movements.");
 }
 
 function draw() {
