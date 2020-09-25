@@ -42,7 +42,10 @@ function setup() {
 
 function draw() {
   background(0);
+  translate(width, 0); // move to far corner
+  scale(-1.0, 1.0);    // flip x-axis backwards
   image(video, 0, 0, 900, 500);
+  translate(width, 0); // move to far corner
   scale(-1.0, 1.0);    // flip x-axis backwards
   fill(255);
   textSize(64);
