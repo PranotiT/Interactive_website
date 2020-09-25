@@ -28,9 +28,9 @@ function gotResults(error, results) {
 
 
 function setup() {
-  createCanvas(900, 500).parent("canvasContainer");
+  createCanvas(900, 590).parent("canvasContainer");
   video = createCapture(VIDEO);
-  video.size(640, 590);
+  video.size(900, 675);
   video.hide();
   background(0);
 
@@ -44,7 +44,7 @@ function draw() {
   background(0);
   translate(width, 0); // move to far corner
   scale(-1.0, 1.0);    // flip x-axis backwards
-  image(video, 0, 0, 640, 590).resize(900, 0);
+  image(video, 0, 0, 900, 675);
   translate(width, 0); // move to far corner
   scale(-1.0, 1.0);    // flip x-axis backwards
   fill(255);
