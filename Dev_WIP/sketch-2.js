@@ -39,6 +39,7 @@ function gotResults(error, result) {
 function setup() {
   createCanvas(900, 500).parent("canvasContainer");
   video = createCapture(VIDEO);
+  video.size(900, 773);
   video.hide();
   background(0);
   mobilenet = ml5.featureExtractor('MobileNet', modelReady);
