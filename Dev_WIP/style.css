@@ -151,6 +151,10 @@ h4 > a:hover {
   text-decoration-style: solid;
 }
 
+footer > div > div > a, footer > div > div > a:visited, footer > div > div > a:hover {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
