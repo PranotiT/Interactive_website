@@ -49,5 +49,7 @@ function draw() {
   scale(-1.0, 1.0);    // flip x-axis backwards
   fill(255);
   textSize(64);
+  strokeWeight(4);
+  stroke(0);
   text(l, 10, height - 20);
 }
