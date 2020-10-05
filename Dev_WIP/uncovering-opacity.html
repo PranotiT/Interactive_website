@@ -27,7 +27,6 @@
 
 <body>
   <img src="HFKlogo.svg" alt="HFK Logo" class="hfk-logo">
-
   <h4><a href="./">← Exploring Neural Networks</a> | Pranoti Tumkar</h4>
   <h1>Uncovering Opacity</h1>
   <p>A machine learning model is a mathematical representation of a real-world process. Here, we use a model which is
@@ -43,6 +42,7 @@
     on, to see if the object they are showing is a part of it.</p>
   <div id="canvasContainer"></div>
 
+  <br>
   <h3>Images It Is Trained on</h3>
   <div id="search-box">
     <input oninput="updateResult(this.value)" type="search" placeholder="Type to start searching..." />
@@ -50,7 +50,8 @@
       <ol class="list-group result"></ol>
     </div>
   </div>
-
+  <br>
+  <br>
   <h3>How The Objects Are Recognized</h3>
   <p>
     This is a classification problem. The pre-trained <a href="https://arxiv.org/abs/1704.04861">MobileNet</a> model has a fixed number of things it
