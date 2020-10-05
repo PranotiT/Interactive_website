@@ -58,6 +58,6 @@ function draw() {
     l2_cached = l2;
     countdown = millis();
   } // so that it updates every 0.5s instead of every frame
-  text(l1_cached, 10, height - 60);
-  text(l2_cached, 10, height - 20);
+  text(l1_cached, 20, height - 60);
+  text(l2_cached, 20, height - 20);
 }

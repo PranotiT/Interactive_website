@@ -254,13 +254,13 @@ footer > div > div > a, footer > div > div > a:visited, footer > div > div > a:h
 }
 
 .canvasControls > .button {
-  min-width: 30%;
+  min-width: 15%;
 }
 
 .canvasControls > .button > button {
   font-size: 0.85rem;
   letter-spacing: 0.1rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   margin-top: 0;
   width: 100%;
 }
