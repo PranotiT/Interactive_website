@@ -13,7 +13,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
     <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <script src="sketch-2.js"></script>
+    <script src="text-rotator.js"></script>
+
     <link
     href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Zilla+Slab:wght@400;600&display=swap"
     rel="stylesheet">
@@ -100,6 +103,11 @@
     <h4>The ball is waiting to be moved based on your hand movements. Train the Neural Network to control the movement of the ball.</h4>
 
     <div id="canvasContainer"></div>
+    <div class="textRotator">
+      <span id="prev" href="#">&lt;</span>
+      <span id="slide"></span>
+	    <span id="next" href="#">&gt;</span>
+    </div>
     <div class="canvasControls">
       <div class="slider" id="slider"></div>
       <div class="button" id="addButton"></div>

@@ -418,6 +418,19 @@ footer > div > div > a, footer > div > div > a:visited, footer > div > div > a:h
   margin-right: auto;
 }
 
+.textRotator {
+  border: solid 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+#prev, #next {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 900px) {
   html {
     padding: 20vh 10vw 10vh 10vw;
