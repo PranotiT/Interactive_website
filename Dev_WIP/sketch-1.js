@@ -3,7 +3,9 @@ let mobilenet;
 let video;
 let l1 = '';
 let l2 = '';
-let countdown = millis();
+let l1_cached = '';
+let l2_cached = '';
+let countdown = 0;
 
 //callback and promise - "model ready" - name of a function
 //model needs time to load - so need to mention that it is ready.
@@ -51,7 +53,11 @@ function draw() {
   textSize(32);
   strokeWeight(4);
   stroke(0);
-  
-  text(l1, 10, height - 60);
-  text(l2, 10, height - 20);
+  if (millis() - countdown > 500) {
+    l1_cached = l1;
+    l2_cached = l2;
+    countdown = millis();
+  } // so that it updates every 0.5s instead of every frame
+  text(l1_cached, 10, height - 60);
+  text(l2_cached, 10, height - 20);
 }
