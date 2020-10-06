@@ -52,12 +52,22 @@ function setup() {
   addButton.mousePressed(function () {
     predictor.addImage(slider.value());
     samples++    //calculate training images captured
+    console.log(predictor.hasAnyTrainedClass);
   });
 
   trainButton = createButton('Train').parent("trainButton");
   trainButton.mousePressed(function () {
     predictor.train(whileTraining);
     trained = true;
+  });
+
+  resetButton = createButton('Reset').parent("resetButton");
+  resetButton.mousePressed(function () {
+    mobilenet = ml5.featureExtractor('MobileNet', modelReady);
+    predictor = mobilenet.regression(video, videoReady);
+    trained = false;
+    samples = 0;
+    console.log(predictor.hasAnyTrainedClass);
   });
 }
  
@@ -70,7 +80,7 @@ function draw() {
   translate(width, 0); // move to far corner
   scale(-1.0, 1.0);    // flip x-axis backwards
   ellipseMode(CENTER);
-  fill(255);
+  fill(254, 231, 21);
   if (!trained)
     ellipse(slider.value() * width, height / 2, 100, 100);
   else
@@ -78,9 +88,8 @@ function draw() {
 
   //display training images captured
   fill(255);
-  textSize(24);
+  textSize(32);
   strokeWeight(4);
-  stroke(0);
-  text("Captured training images: " + samples, 10, height - 10);
-
+  stroke(16, 24, 32);
+  text("Captured training images: " + samples, 20, height - 20);
 }

@@ -254,13 +254,13 @@ footer > div > div > a, footer > div > div > a:visited, footer > div > div > a:h
 }
 
 .canvasControls > .button {
-  min-width: 30%;
+  min-width: 15%;
 }
 
 .canvasControls > .button > button {
   font-size: 0.85rem;
   letter-spacing: 0.1rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   margin-top: 0;
   width: 100%;
 }
@@ -416,6 +416,19 @@ footer > div > div > a, footer > div > div > a:visited, footer > div > div > a:h
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.textRotator {
+  border: solid 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+#prev, #next {
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 900px) {
