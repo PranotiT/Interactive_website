@@ -30,16 +30,21 @@
   <h4><a href="./">← Exploring Neural Networks</a> | Pranoti Tumkar</h4>
   <h1>Uncovering Opacity</h1>
   <p>A machine learning model is a mathematical representation of a real-world process. Here, we use a model which is
-    already trained to recognise images - a pre-trained model. <a href="https://towardsdatascience.com/how-do-pretrained-models-work-11fe2f64eaa2">Pre-trained models</a>  are used in real-world applications to
-    make decisions about various aspects of our lives. I also use pre-trained models in this project to show how they
-    are limited by the data they are trained on. Yet, they are used to influence important aspects of our lives.
-    Pre-trained model has learnt based on a fixed dataset. If i show it an image not from it’s dataset, it will not know
-    about it. </p>
+    already trained to recognise images — a pre-trained model.
+    <a href="https://towardsdatascience.com/how-do-pretrained-models-work-11fe2f64eaa2">Pre-trained models</a>
+    are used in real-world applications to make decisions about various aspects of our lives. I also use pre-trained
+    models in this project to show how they are limited by the data they are trained on. Yet, they are used to influence
+    important aspects of our lives. Pre-trained model has learnt based on a fixed dataset. If I show it an image not
+    from its dataset, it will not know about it. </p>
+
   <p>This hands-on demonstration focuses on the usage of “pre-trained models” in Machine Learning using image
-    classification. In <a href="https://machinelearningmastery.com/types-of-classification-in-machine-learning/">classification</a>, information is categorized into predefined categories. For example, an email can
+    classification. In <a
+      href="https://machinelearningmastery.com/types-of-classification-in-machine-learning/">classification</a>,
+    information is categorized into predefined categories. For example, an email can
     either be ‘spam’ or ‘not spam’. You can hold up an object to the webcam and the model will recognise the object.
     Sometimes, the recognition is not accurate. Below, you can search through the list of images this model is trained
-    on, to see if the object they are showing is a part of it.</p>
+    on,
+    to see if the object you are showing is a part of it.</p>
   <div id="canvasContainer"></div>
 
   <br>
@@ -54,9 +59,9 @@
   <br>
   <h3>How The Objects Are Recognized</h3>
   <p>
-    This is a classification problem. The pre-trained <a href="https://arxiv.org/abs/1704.04861">MobileNet</a> model has a fixed number of things it
-    knows about - the
-    images it is trained on. The list of images is below and you can search through them. It will classify the object
+    This is a classification problem. The pre-trained <a href="https://arxiv.org/abs/1704.04861">MobileNet</a> model has
+    a fixed number of things it knows about - the images it is trained on. The list of images is shown above and you can
+    search through them. It will classify the object
     you are showing it based on the original 1,000 image categories it is trained on. It is not aware of any other
     information. Which is why, you will find that oftentimes, the items shown through the webcam are not classified
     accurately - such as your face! But the result you see will be something from the original 1,000 categories composed
@@ -66,7 +71,11 @@
   <img src="images/how-obj-recognized.svg" alt="">
   <br>
   <h3>Real-World Applications</h3>
-  <p>We have often encountered classification problems where Machine Learning is used. For example, the spam filters in your email. They are trained on a huge database of e-mails and classify if a new email is “spam” or “not spam”. It adapts over time and learns as you mark or unmark new emails as “spam” or “not spam”. This is an example where Machine Learning makes it easy and it would be nearly impossible to have humans do this task. The sheer number of emails each one of us gets is huge and would be tough for humans to sort through each one.</p>
+  <p>We have often encountered classification problems where Machine Learning is used. For example, the spam filters in
+    your email. They are trained on a huge database of e-mails and classify if a new email is “spam” or “not spam”. It
+    adapts over time and learns as you mark or unmark new emails as “spam” or “not spam”. This is an example where
+    Machine Learning makes it easy and it would be nearly impossible to have humans do this task. The sheer number of
+    emails each one of us gets is huge and would be tough for humans to sort through each one.</p>
 </body>
 <footer>
   <hr />
