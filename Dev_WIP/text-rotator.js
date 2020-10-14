@@ -3,12 +3,11 @@ $(document).ready(function (){
     var steps = [
         "1. Move slider to the left end. Place your hand over the yellow spot.",
         "2. Click “Capture training image” multiple times.",
-        "3. Move slider bit to the right. Place your hand over the yellow spot. ",
+        "3. Move slider bit to the right. Place your hand over the yellow spot.",
         "4. Click “Capture training image” multiple times.",
         "5. Repeat until you reach the right end of the slider.",
         "6. Click “Capture training image” multiple times.",
-        "7. Click “Train” once.",
-        "8. The model will be trained and you can control the ball with your hand movements."
+        "7. Click “Train” once."
     ];
     $("#prev").click(function (){
         if (currentPos == 0) {
