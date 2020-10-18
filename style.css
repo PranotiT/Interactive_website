@@ -412,6 +412,10 @@ footer > div > div > a, footer > div > div > a:visited, footer > div > div > a:h
   background: #000000;
 }
 
+.mobile {
+  display: none;
+}
+
 #canvasContainer > canvas {
   display: block;
   margin-left: auto;
@@ -466,6 +470,11 @@ footer > div > div > a, footer > div > div > a:visited, footer > div > div > a:h
     padding: 1rem 1.5rem;
   }
 
+  footer > div {
+    display: block;
+    text-align: center;
+  }
+
   .row {
     display: block;
   }
@@ -475,5 +484,13 @@ footer > div > div > a, footer > div > div > a:visited, footer > div > div > a:h
     margin: 2rem auto;
     padding: 0;
     width: 100%;
+  }
+
+  .mobile {
+    display: inline;
+  }
+
+  .desktop {
+    display: none;
   }
 }
